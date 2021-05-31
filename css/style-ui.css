@@ -1,0 +1,530 @@
+/*---global---*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7,
+p,
+a {
+    margin: 0;
+}
+
+body {
+    box-sizing: content-box;
+}
+
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static;
+}
+
+.inner-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inner-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inner-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.flex-ctn {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;              
+}
+
+.flex-0 {
+    flex: 0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.full-height-scroll {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.full-max-height-scroll {
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.item-move.focus {
+    cursor: grab;
+}
+
+.element-dragging {
+    position: fixed;
+    cursor: grabbing;
+}
+
+.row-ctn {
+    min-height: 30px;
+    margin-bottom: 10px;
+}
+
+.row-ctn:last-child {
+    margin-bottom: 0px;
+}
+
+.display-none {
+    display: none;
+}
+
+.border-radius {
+    border-radius: 2px;
+}
+
+.seperator {
+    border: 1px solid;
+    margin: 10px 0;
+}
+
+.padding-ctn {
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+}
+
+/*---modals---*/
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-ctn {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    width: 90%;
+    max-width: 800px;
+    max-height: 600px;
+}
+
+.modal-overlay.open,
+.modal-ctn.open {
+    display: block;
+}
+
+.modal-ctn > .flex-ctn {
+    height: 100%;
+}
+
+.modal-ctn .modal-top-bar {
+    height: 30px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.modal-ctn .modal-inner-ctn {
+    max-height: 555px;
+}
+
+.modal-ctn .modal-inner-ctn > .inner-ctn {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.modal-ctn.no-bot-bar .modal-inner-ctn {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.modal-ctn .modal-bot-bar {
+    height: 30px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.modal-ctn .modal-top-bar-title {
+    left: 10px;
+}
+
+.modal-ctn .modal-close-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    border-top-right-radius: 2px;
+    transition: 0.25s ease;
+}
+
+.modal-ctn .modal-input {
+    width: 100%;
+    height: 30px;
+    border-radius: 2px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+}
+
+.modal-ctn .modal-textarea {
+    width: 100%;
+    border-radius: 2px;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    resize: vertical;
+}
+
+.modal-ctn .modal-btn {
+    height: 30px;
+}
+
+.modal-ctn .modal-btn:first-child {
+    border-bottom-left-radius: 2px;
+}
+
+.modal-ctn .modal-btn:last-child {
+    border-bottom-right-radius: 2px;
+}
+
+/*---custom select---*/
+
+.select-ctn {
+    z-index: 2;
+}
+
+.select-ctn .select-title-ctn {
+    cursor: pointer;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.select-ctn.open .select-title-ctn {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.select-ctn .select-title {
+    left: 10px;
+}
+
+.select-ctn .select-open-btn {
+    right: 10px;
+}
+
+.select-ctn .select-inner-ctn {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    border-radius: 2px;
+    border: 2px solid;
+    overflow-y: auto;
+    z-index: 3;
+}
+
+.select-ctn.open .select-inner-ctn {
+    display: block;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    animation: fadeIn ease 0.5s;
+}
+
+.select-ctn .select-option {
+    height: 30px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.select-ctn .select-option > div {
+    left: 10px;
+}
+
+/*---autocomplete---*/
+
+.autocomplete-ctn .autocomplete-inner-ctn {
+    display: none;
+    position: fixed;
+    z-index: 9;
+    max-height: 200px;
+    border-radius: 2px;
+    border: 2px solid;
+    overflow-y: auto;
+    z-index: 3;
+}
+
+.autocomplete-ctn.open input {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.autocomplete-ctn.open .autocomplete-inner-ctn {
+    display: block;
+    animation: fadeIn ease 0.5s;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.autocomplete-ctn .autocomplete-item:not(tr) {
+    height: 30px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.autocomplete-ctn table th {
+    text-transform: capitalize;
+}
+
+.autocomplete-ctn .autocomplete-item > div {
+    left: 10px;
+}
+
+.autocomplete-ctn table {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.autocomplete-ctn table th,
+.autocomplete-ctn table td {
+    padding: 5px;
+    border: 1px solid;
+}
+
+.autocomplete-ctn table td {
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+/*---tags---*/
+
+.tag {
+    border-radius: 2px;
+    height: 16px;
+    padding: 7px;
+    padding-right: 40px;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tag .tag-remove-btn {
+    transition: 0.25s ease;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 30px;
+}
+
+
+/*---tabs---*/
+
+.tab-btn {
+    float: left;
+    height: 30px;
+    width: 80px;
+    transition: 0.25s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-btn.disabled {
+    cursor: not-allowed;
+}
+
+.tab-inner-ctn {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tab-inner-ctn.selected {
+    display: block;
+}
+
+/*---custom table---*/
+
+.table-ctn {
+    width: 100%;
+    height: 100%;
+}
+
+.table-ctn table {
+    width: 100%;
+    font-size: 10px;
+    border-collapse: collapse;
+}
+
+.table-ctn .table-head {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.table-ctn .table-th {
+    height: 30px;
+    font-size: 12px;
+    border-right: 2px solid;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.table-ctn .full-height-scroll {
+    border: 2px solid;
+    border-top: 0;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.table-ctn tr {
+    border-bottom: 2px solid;
+    transition: 0.25s ease;
+}
+
+.table-ctn tr:last-child {
+    border-bottom: 0;
+}
+
+.table-ctn td {
+    padding: 10px;
+    border-right: 2px solid;
+}
+
+.table-ctn td:last-child,
+.table-ctn .table-th:last-child {
+    border-right: 0;
+}
+
+/*---loader---*/
+
+.loader-ctn {
+    position: fixed;
+    z-index: 999;
+}
+
+.loader-ctn.loaded {
+    z-index: -1;
+}
+
+.loader-ctn.loaded > .inner-center {
+    opacity: 0;
+}
+
+.loader-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.loader-ctn.loaded .loader-circle {
+    display: none;
+}
+
+.loader-line-mask {
+    width: 60px;
+    height: 120px;
+    overflow: hidden;
+    transform-origin: 60px 60px;
+    animation: rotate-center 1.2s infinite linear;
+    margin-left: -30px;
+}
+
+.loader-line-mask .loader-line {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+#loader-particles {
+    left: -51%;
+    top: -51%;
+    width: 202%;
+    height: 202%;
+    transform: scale3d(0.5, 0.5, 1);
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+@keyframes rotate-center { 
+    
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    } 
+    
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}

@@ -1,0 +1,212 @@
+/*---fonts---*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+    font-family: 'Roboto';
+}
+
+body,
+p,
+a,
+textarea,
+input {
+    font-family: 'Montserrat';
+}
+
+/*---global colors---*/
+
+.primary-1-background-color,
+.primary-1-background-color-hover:hover,
+.primary-1-background-color-before:before,
+.primary-1-background-color-after:after {
+    background-color: #1e1e28 !important;
+}
+
+.primary-1-color,
+.primary-1-color-hover:hover,
+.primary-1-color-before:before,
+.primary-1-color-after:after {
+    color: #1e1e28 !important;
+}
+
+.primary-1-border-color,
+.primary-1-border-color-hover:hover,
+.primary-1-border-color-before:before,
+.primary-1-border-color-after:after {
+    border-color: #1e1e28 !important;
+}
+
+.primary-2-background-color,
+.primary-2-background-color-hover:hover,
+.primary-2-background-color-before:before,
+.primary-2-background-color-after:after {
+    background-color: #2d2d30 !important;
+}
+
+.primary-2-color,
+.primary-2-color-hover:hover,
+.primary-2-color-before:before,
+.primary-2-color-after:after {
+    color: #2d2d30 !important;
+}
+
+.primary-2-border-color,
+.primary-2-border-color-hover:hover,
+.primary-2-border-color-before:before,
+.primary-2-border-color-after:after {
+    border-color: #2d2d30 !important;
+}
+
+.secondary-1-background-color,
+.secondary-1-background-color-hover:hover,
+.secondary-1-background-color-before:before,
+.secondary-1-background-color-after:after {
+    background-color: #fff !important;
+}
+
+.secondary-1-color,
+.secondary-1-color-hover:hover,
+.secondary-1-color-before:before,
+.secondary-1-color-after:after {
+    color: #fff !important;
+}
+
+.secondary-1-border-color,
+.secondary-1-border-color-hover:hover,
+.secondary-1-border-color-before:before,
+.secondary-1-border-color-after:after {
+    border-color: #fff !important;
+}
+
+.secondary-2-background-color,
+.secondary-2-background-color-hover:hover,
+.secondary-2-background-color-before:before,
+.secondary-2-background-color-after:after {
+    background-color: #333 !important;
+}
+
+.secondary-2-color,
+.secondary-2-color-hover:hover,
+.secondary-2-color-before:before,
+.secondary-2-color-after:after {
+    color: #333 !important;
+}
+
+.secondary-2-border-color,
+.secondary-2-border-color-hover:hover,
+.secondary-2-border-color-before:before,
+.secondary-2-border-color-after:after {
+    border-color: #333 !important;
+}
+
+.accent-background-color,
+.accent-background-color-hover:hover,
+.accent-background-color-before:before,
+.accent-background-color-after:after {
+    background-color: #a2481e !important;
+}
+
+.accent-color,
+.accent-color-hover:hover,
+.accent-color-before:before,
+.accent-color-after:after {
+    color: #a2481e !important;
+}
+
+.accent-border-color,
+.accent-border-color-hover:hover,
+.accent-border-color-before:before,
+.accent-border-color-after:after {
+    border-color: #a2481e !important;
+}
+
+/*--- specific colors ---*/
+
+.blue-background-color,
+.blue-background-color-hover:hover,
+.blue-background-color-before:before,
+.blue-background-color-after:after {
+    background-color: #007acc !important;
+}
+
+.blue-color,
+.blue-color-hover:hover,
+.blue-color-before:before,
+.blue-color-after:after {
+    color: #007acc !important;
+}
+
+.blue-border-color,
+.blue-border-color-hover:hover,
+.blue-border-color-before:before,
+.blue-border-color-after:after {
+    border-color: #007acc !important;
+}
+
+.green-background-color,
+.green-background-color-hover:hover,
+.green-background-color-before:before,
+.green-background-color-after:after {
+    background-color: #099268 !important;
+}
+
+.green-color,
+.green-color-hover:hover,
+.green-color-before:before,
+.green-color-after:after {
+    color: #099268 !important;
+}
+
+.green-border-color,
+.green-border-color-hover:hover,
+.green-border-color-before:before,
+.green-border-color-after:after {
+    border-color: #099268 !important;
+}
+
+.red-background-color,
+.red-background-color-hover:hover,
+.red-background-color-before:before,
+.red-background-color-after:after {
+    background-color: #ff0044 !important;
+}
+
+.red-color,
+.red-color-hover:hover,
+.red-color-before:before,
+.red-color-after:after {
+    color: #ff0044 !important;
+}
+
+.red-border-color,
+.red-border-color-hover:hover,
+.red-border-color-before:before,
+.red-border-color-after:after {
+    border-color: #ff0044 !important;
+}
+
+/*---webkit scrollbars---*/
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #1e1e28; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d2d30; 
+}

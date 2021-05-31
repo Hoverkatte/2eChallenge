@@ -1,0 +1,31 @@
+.main-body-inner {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5%;                   
+}
+
+.side-bar {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.bot-bar {
+    height: 30px;
+}
+
+.google-map {
+    height: 250px;
+}
+
+.list-item-btn-ctn {
+    right: 10px;
+}
+
+.list-item-btn {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 12px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
